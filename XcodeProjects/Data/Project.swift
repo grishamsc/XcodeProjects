@@ -55,6 +55,10 @@ extension Project {
     var hasCocoapods: Bool {
         FileManager.default.getPodfile(project: self) != nil
     }
+    
+    var hasBundler: Bool {
+        FileManager.default.getPodfile(project: self) != nil
+    }
 }
 
 extension Project {

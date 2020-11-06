@@ -21,6 +21,10 @@ extension FileManager {
     func getPodfile(project: Project) -> URL? {
         filter(urls: contentsOf(project: project), byName: "Podfile")?.first
     }
+    
+    func getGemfile(project: Project) -> URL? {
+        filter(urls: contentsOf(project: project), by: "Gemfile")?.first
+    }
 }
 
 private extension FileManager {
